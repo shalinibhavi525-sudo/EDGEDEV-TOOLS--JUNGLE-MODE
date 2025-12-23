@@ -1,0 +1,71 @@
+{
+  "name": "edge-dev-tools",
+  "displayName": "Edge Dev Tools: Jungle Mode",
+  "description": "Optimizing VS Code for low-bandwidth environments. Built from a jungle base in Tripura, India.",
+  "version": "0.1.0",
+  "publisher": "shambhavi-singh",
+  "author": {
+    "name": "Shambhavi Singh",
+    "email": "shalinibhavi525@gmail.com"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/shalinibhavi525-sudo/edge-dev-tools"
+  },
+  "engines": {
+    "vscode": "^1.80.0"
+  },
+  "categories": [
+    "Other",
+    "Education",
+    "Performance"
+  ],
+  "keywords": [
+    "bandwidth",
+    "low-bandwidth",
+    "optimization",
+    "edge",
+    "rural-tech",
+    "jungle-mode"
+  ],
+  "main": "./extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "edge-dev.enable",
+        "title": "Edge Dev: Enable Jungle Mode (Save Data)",
+        "category": "EdgeDev"
+      },
+      {
+        "command": "edge-dev.disable",
+        "title": "Edge Dev: Disable Jungle Mode",
+        "category": "EdgeDev"
+      },
+      {
+        "command": "edge-dev.status",
+        "title": "Edge Dev: Check Network Strategy",
+        "category": "EdgeDev"
+      }
+    ],
+    "configuration": {
+      "title": "Edge Dev Tools",
+      "properties": {
+        "edge-dev.autoEnable": {
+          "type": "boolean",
+          "default": false,
+          "description": "Automatically enable low-bandwidth mode on startup."
+        },
+        "edge-dev.disableTelemetry": {
+          "type": "boolean",
+          "default": true,
+          "description": "Disable all VS Code telemetry and background pings."
+        }
+      }
+    }
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.80.0"
+  }
+}
+}
