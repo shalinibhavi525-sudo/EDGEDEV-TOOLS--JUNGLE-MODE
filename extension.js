@@ -27,7 +27,7 @@ async function enableEdgeMode() {
     const workspaceConfig = vscode.workspace.getConfiguration();
 
     try {
-        // Elite Hardening: Killing background noise
+      
         await workspaceConfig.update('telemetry.telemetryLevel', 'off', true);
         await workspaceConfig.update('extensions.autoUpdate', false, true);
         await workspaceConfig.update('update.mode', 'manual', true);
